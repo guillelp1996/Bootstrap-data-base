@@ -8,8 +8,6 @@ const dropDB = async ()=>{
         const pool = getPool();
         await pool.query(`DROP DATABASE IF EXISTS ${DATABASE_NAME};`);
         console.log(`Database: ${DATABASE_NAME} was removed`);
-        console.assert(false, "removed")
-
     } catch (error) {
         console.log(error)
     }finally{
